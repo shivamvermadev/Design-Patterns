@@ -7,6 +7,8 @@ public class InfoLogProcessor extends LogProcessor {
     }
 
     public void log(int logLevel, String message) {
+        // added for the code flow
+        System.out.print("Info -> ");
         if(logLevel == INFO) {
             System.out.println("INFO: " + message );
         } else {
