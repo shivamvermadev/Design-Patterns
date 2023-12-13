@@ -62,4 +62,15 @@
   - Design ATM
   - Design Vending Machine
   - Design Loggers(Amazon question)
-  - 
+  - Chain of Responsibility is a behavioral design pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+  - ![img_4.png](img_4.png)
+
+### Proxy design pattern
+- Proxy is a structural design pattern that lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
+- Why would you want to control access to an object? Here is an example: you have a massive object that consumes a vast amount of system resources. You need it from time to time, but not always.
+- ![img_5.png](img_5.png)
+- ![img_6.png](img_6.png)
+- Application Usage:
+  - Access restriction
+  - Caching
+  - for a request u want to do preprocessing or postprocessing.
