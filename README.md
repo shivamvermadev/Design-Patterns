@@ -49,4 +49,17 @@
   - To prevent `class explosion`.
 - Real world analogy
 - ![img_3.png](img_3.png)
-- 
+
+---
+### Factory Pattern
+- It is used to create object based on some condition.
+
+### Abstract Factory Pattern
+- Factory of factory
+
+### Chain of Responsibility Pattern
+- Application Usage:
+  - Design ATM
+  - Design Vending Machine
+  - Design Loggers(Amazon question)
+  - 
