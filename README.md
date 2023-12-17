@@ -103,10 +103,18 @@
 - ![img_2.png](img_2.png)
 - On the other hand, the store could send tons of emails (which might be considered spam) to all customers each time a new product becomes available. This would save some customers from endless trips to the store. At the same time, it’d upset other customers who aren’t interested in new products.
 - It looks like we’ve got a conflict. Either the customer wastes time checking product availability or the store wastes resources notifying the wrong customers.
--
+#### Solution:
+- The object that has some interesting state is often called subject, but since it’s also going to notify other objects about the changes to its state, we’ll call it publisher. All other objects that want to track changes to the publisher’s state are called subscribers.
+- The Observer pattern suggests that you add a subscription mechanism to the publisher class so individual objects can subscribe to or unsubscribe from a stream of events coming from that publisher.
+- ![img_24.png](img_24.png)
+- Now, whenever an important event happens to the publisher, it goes over its subscribers and calls the specific notification method on their objects.
+- ![img_25.png](img_25.png)
+- ![img_26.png](img_26.png)
 - ![img.png](img.png)
-- Theory nicely explained here https://refactoring.guru/design-patterns/observer
 
+#### Applicability
+- Use the Observer pattern when changes to the state of one object may require changing other objects, and the actual set of objects is unknown beforehand or changes dynamically.
+- Use the pattern when some objects in your app must observe others, but only for a limited time or in specific cases.
 ---
 
 ### Decorator Pattern
