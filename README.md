@@ -4,6 +4,9 @@
 - Design patterns are the principles for OOP, using design pattern we design manageable, scalable software design, which helps us when we scale.
 
 ### `Note: Inheritance is an "is-a" relationship. Composition is a "has-a"`.
+### Aggregation: Object A contains Object B; B can live without A.
+### Composition: Object A consists of Object B. A manages life-cycle of B; B can't live without A
+
 - You do composition by having an instance of another class C as a field of your class, instead of extending C. A good example where composition would've been a lot better than inheritance is java.util.Stack, which currently extends java.util.Vector. This is now considered a blunder. A stack "is-NOT-a" vector; you should not be allowed to insert and remove elements arbitrarily. It should've been composition instead.
 - Unfortunately it's too late to rectify this design mistake, since changing the inheritance hierarchy now would break compatibility with existing code. Had Stack used composition instead of inheritance, it can always be modified to use another data structure without violating the API.
 - composition: which is delegating work to other objects.
@@ -118,16 +121,33 @@
 ---
 
 ### Decorator Pattern
+- Decorator is a structural design pattern that lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.
 - Suppose we have an object F1 that has features, so we can wrap a wrapper around it F2, to add more features to it, so the new thing that we got is now F1 + F2 and like that with multiple wrappers we can have F1 + F2 + F3 + ... + Fn.
 - ![img_1.png](img_1.png)
 - Why we need decorator pattern ? 
-  - To prevent `class explosion`.
-- Real world analogy
-- ![img_3.png](img_3.png)
+  - To prevent `class explosion`. A `class explosion` typically refers to a situation where the number of classes in a software system grows significantly, often leading to complexity and maintenance challenges.
+  - ![img_27.png](img_27.png)
+- ![img_28.png](img_28.png)
+- The client code would need to wrap a basic notifier object into a set of decorators that match the client’s preferences. The resulting objects will be structured as a stack.
+- ![img_29.png](img_29.png)
+- ![img_30.png](img_30.png)
+
+### Pros
+- You can extend an object’s behavior without making a new subclass.
+- You can add or remove responsibilities from an object at runtime.
+- Single Responsibility Principle. You can divide a monolithic class that implements many possible variants of behavior into several smaller classes.
+
+#### Applicability
+- Use the Decorator pattern when you need to be able to assign extra behaviors to objects at runtime without breaking the code that uses these objects.
+- Use the pattern when it’s awkward or not possible to extend an object’s behavior using inheritance.
+
 
 ---
 ### Factory Pattern
 - It is used to create object based on some condition.
+- Factory Method is a creation-al design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created
+- ![img_31.png](img_31.png)
+- ![img_32.png](img_32.png)
 
 ### Abstract Factory Pattern
 - Factory of factory
@@ -195,4 +215,9 @@
 - Definition: Bridge design pattern decouples an abstraction from its implementation so that two can vary independently.
 - ![img_19.png](img_19.png)
 - ![img_20.png](img_20.png)
+
+
+
+### Some important links
+- https://stackoverflow.com/questions/885937/what-is-the-difference-between-association-aggregation-and-composition
 - 
