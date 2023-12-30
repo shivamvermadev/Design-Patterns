@@ -19,3 +19,6 @@
     When you put two classes together like this you’re using composition.
     Instead of inheriting their behavior, the ducks get their behavior by being
     composed with the right behavior object.
+- Strive for loosely coupled designs between objects that interact.
+  - Loosely coupled designs allow us to build flexible OO systems that can handle change because they minimize the interdependency between objects.
+- Classes should be open for extension, but closed for modification.
